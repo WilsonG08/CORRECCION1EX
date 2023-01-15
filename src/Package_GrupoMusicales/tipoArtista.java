@@ -13,6 +13,10 @@ public class tipoArtista extends Artista{
         this.generoArtista = generoArtista;
     }
 
+    public String getGeneroArtista() {
+        return generoArtista;
+    }
+
     @Override
     public void imprimirAtributo() {
         super.imprimirAtributo();

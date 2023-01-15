@@ -9,8 +9,13 @@ public class Discos extends tipoArtista{
         this.nombreDisco = nombreDisco;
     }
 
+
     public void setNombreDisco(String nombreDisco) {
         this.nombreDisco = nombreDisco;
+    }
+
+    public String getNombreDisco() {
+        return nombreDisco;
     }
 
     @Override

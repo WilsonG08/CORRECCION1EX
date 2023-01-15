@@ -23,6 +23,7 @@ public class mainArtista {
 
     private static void imprimirListas(ArrayList lista){
         for (int i = 0; i < lista.size();i++){
+            System.out.println("[ "+(1+i)+" ]");
             Artista art= (Artista) lista.get(i);
 
             art.imprimirAtributo();

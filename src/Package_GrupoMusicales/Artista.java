@@ -18,8 +18,16 @@ public class Artista {
         this.anioNac = anioNac;
     }
 
+    public String getNombreArtista() {
+        return nombreArtista;
+    }
+
+    public String getAnioNac() {
+        return anioNac;
+    }
+
     public void imprimirAtributo(){
-        System.out.println("[ ]\n"+"Nombre del artista: "+nombreArtista+
+        System.out.println("Nombre del artista: "+nombreArtista+
                 "\t\tAño de nacimiento: "+anioNac);
     }
 
