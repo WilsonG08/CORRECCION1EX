@@ -1,8 +1,7 @@
-import Package_Videojuegos.Videojuegos;
-
+package Package_Videojuegos;
 import java.util.Scanner;
 
-public class main {
+public class mainVideojuego {
 
     static Scanner sc = new Scanner(System.in);
     static Videojuegos vdj =  new Videojuegos();
@@ -14,65 +13,34 @@ public class main {
 
         //CONTROL DE ERRORES
         try{
+            System.out.print("Cuantos elementos desea ingresar?: ");
+            ele = sc.nextInt();
 
-            do{
-                menu();
-                do{
-                    System.out.print("Ingrese la opción: ");
-                    opcion = sc.nextInt();
-                }while (opcion<0||opcion>3);
-
-
-                System.out.print("Cuantos elementos desea ingresar?: ");
-                ele = sc.nextInt();
-
-                String[] nombre = new String[ele];
-                String[] nombrePer = new String[ele];
-                String[] nombreArma = new String[ele];
-                int[] anio= new int[ele];
-                int[] vidaPer= new int[ele];
-                int[] cantidad= new int[ele];
-
-                switch (opcion){
-                    case 1:
-                        System.out.println("\n [ V I D E O J U E G O S\n");
-                        //INGRESO DEL NOMBRE Y AÑO DEL VIDEOJUEGO
-                        ingresoVideojuego(ele,nombre,anio);
-
-                        //INGRESO DEL NOMBRE DEL PERSONAJE Y VIDA DEL PERSONAJE
-                        ingresoPersonaje(ele,nombrePer,vidaPer);
-
-                        //INGRESO DEL NOMBRE DEL ARMA Y CANTIDAD
-                        ingresoEquipamiento(ele,nombreArma,cantidad);
-
-                        //IMPRESION DEL RESULTADO
-                        impresionArray(ele,nombre,anio,nombrePer,vidaPer,nombreArma,cantidad);
+            String[] nombre = new String[ele];
+            String[] nombrePer = new String[ele];
+            String[] nombreArma = new String[ele];
+            int[] anio= new int[ele];
+            int[] vidaPer= new int[ele];
+            int[] cantidad= new int[ele];
 
 
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                }
+            System.out.println("\n [ V I D E O J U E G O S\n");
+            //INGRESO DEL NOMBRE Y AÑO DEL VIDEOJUEGO
+            ingresoVideojuego(ele,nombre,anio);
 
+            //INGRESO DEL NOMBRE DEL PERSONAJE Y VIDA DEL PERSONAJE
+            ingresoPersonaje(ele,nombrePer,vidaPer);
 
+            //INGRESO DEL NOMBRE DEL ARMA Y CANTIDAD
+            ingresoEquipamiento(ele,nombreArma,cantidad);
 
-
-
-
-            }while(opcion>3);
-            System.out.println("GRACIAS!");
-
-
-
-
+            //IMPRESION DEL RESULTADO
+            impresionArray(ele,nombre,anio,nombrePer,vidaPer,nombreArma,cantidad);
 
         }catch (Exception error){
 
             System.err.println("Se produjo un error al ingresar los datos!!");
         }
-
 
     }
 
@@ -109,7 +77,6 @@ public class main {
         }
     }
 
-
     private static void impresionArray(int ele, String[] nombre, int[]anio,String[] nombrePer,int[] vidaPer
     ,String[] nombreArma, int[] cantidad){
         for (int i = 0; i<ele;i++){
@@ -123,12 +90,4 @@ public class main {
         }
     }
 
-    private static void menu(){
-        System.out.println("\t ==[ M E N Ú ]==");
-        System.out.println("1. Videojuegos");
-        System.out.println("2. Artistas");
-        System.out.println("3. Comida");
-    }
-
-    
 }
