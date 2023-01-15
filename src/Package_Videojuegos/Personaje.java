@@ -22,6 +22,7 @@ public class Personaje extends Videojuegos {
         return cantidadVida;
     }
 
+
     public void setCantidadVida(int cantidadVida) {
         this.cantidadVida = cantidadVida;
     }

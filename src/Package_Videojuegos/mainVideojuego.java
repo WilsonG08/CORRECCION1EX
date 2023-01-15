@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class mainVideojuego {
 
     static Scanner sc = new Scanner(System.in);
+
+    // LLAMANDO
     static Videojuegos vdj =  new Videojuegos();
 
     public static void main(String[] args) {
